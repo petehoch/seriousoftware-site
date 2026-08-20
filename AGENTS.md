@@ -1,10 +1,33 @@
 # Serious Software Website — Agent Instructions
 
+## Quick Reference
+
+| Item | Value |
+|------|-------|
+| **Repository** | `/Users/petehoch/Dev/seriousoftware-site` |
+| **Public Site** | `https://seriousoftware.com` (via GitHub Pages) |
+| **Hosting** | GitHub Pages (CNAME: `seriousoftware.com`) |
+| **Stack** | Semantic HTML, CSS, minimal vanilla JS |
+| **No Frameworks** | No React, Next.js, Vue, CMS, npm build tools, or third-party dependencies without justification |
+| **Related App Repo** | `/Users/petehoch/Dev/hackaton2026` (FetchBag Xcode app — separate, do not move code here) |
+| **Deployment** | Push to `main` branch → GitHub Pages publishes automatically |
+
+## Current Status
+
+| Item | Status |
+|------|--------|
+| Root `index.html` | ✓ Exists (placeholder) — needs content |
+| `assets/css/site.css` | ✗ Not created |
+| `fetchbag/` directory | ✗ Not created |
+| FetchBag product page | ✗ Not created |
+| FetchBag manual pages | ✗ Not created |
+| Support page | ✗ Not created |
+| Privacy page | ✗ Not created |
+
+**Next Steps:** Build Serious Software home page and FetchBag documentation incrementally, keeping the site deployable and functional after each meaningful change.
+
 ## Project
 This repository is the public website for **Serious Software**.
-
-Local repository: `/Users/petehoch/Dev/seriousoftware-site`  
-Public site: `https://seriousoftware.com`
 
 The site is hosted by **GitHub Pages**. GoDaddy is used only for domain registration and DNS; do not use or depend on GoDaddy website-building/hosting tools.
 
@@ -59,6 +82,56 @@ Start deliberately simple:
 Do **not** introduce React, Next.js, Vue, a database, CMS, npm build tooling, or another framework unless there is a demonstrated need and the change is discussed first.
 
 Avoid third-party dependencies merely for convenience. The site should work as static files served directly by GitHub Pages.
+
+## HTML & CSS Conventions
+
+**General approach:**
+- Use semantic HTML elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, etc.)
+- Organize CSS in a single `assets/css/site.css` file (until project scale justifies splitting)
+- Use CSS custom properties for colors, spacing, typography scales
+- Mobile-first responsive design with media queries
+- System fonts preferred; justify any web fonts by performance benefit
+
+**Naming conventions:**
+- BEM-style class names for components: `.component__element--modifier`
+- Data attributes for JS hooks: `data-action="fetch-item"`
+- File paths follow directory structure: `/fetchbag/manual/getting-started.html`
+
+**Accessibility built-in:**
+- Sufficient color contrast (WCAG AA minimum)
+- Keyboard-navigable interactive elements
+- Meaningful link text (avoid "click here")
+- Alt text on images (describe purpose/content)
+- Visible `:focus` states for all interactive elements
+- ARIA labels where semantic HTML isn't sufficient
+
+## Common Tasks
+
+**Adding a new page:**
+1. Create file in appropriate directory (e.g., `fetchbag/manual/topic.html`)
+2. Use consistent HTML structure with semantic elements
+3. Link from navigation/parent pages
+4. Test in multiple browsers and screen sizes
+5. Verify accessibility (keyboard navigation, contrast, focus states)
+
+**Updating documentation:**
+1. Check if app behavior described in user guide matches current FetchBag version
+2. Update terminology to match app UI
+3. Replace outdated screenshots with current ones
+4. Keep URLs stable for direct linking from app and support
+
+**Testing changes locally:**
+1. Open HTML files directly in browser (no build step required)
+2. Check all links work correctly
+3. Verify responsive layout at multiple breakpoints
+4. Test keyboard navigation and screen reader compatibility
+5. Validate HTML with `<html>` lang, `<meta>` tags, proper nesting
+
+**Deployment:**
+- Changes to `main` branch automatically deploy via GitHub Pages
+- No manual deployment steps needed
+- Always test locally before pushing
+- Verify live site reflects changes after push
 
 ## Proposed Structure
 
@@ -190,6 +263,34 @@ Avoid:
 
 Accessibility is required. Use semantic elements, sufficient contrast, keyboard-accessible interactions, meaningful alt text, and visible focus states.
 
+## Content Guidelines
+
+**Tone and voice:**
+- Professional but not corporate
+- Clear and direct
+- Honest about limitations; don't oversell
+- Knowledgeable without being condescending
+
+**What to write about:**
+- Problems FetchBag solves and how
+- Features that exist (never speculative ones)
+- Usage examples grounded in real workflows
+- Troubleshooting and FAQ
+
+**What NOT to write about:**
+- Testimonials, case studies, or social proof (invent nothing)
+- Unreleased features or roadmap items
+- Comparisons to competitors
+- Excessive marketing language
+- Statistics or usage claims without data
+- Cute dog branding (no puns about "fetch")
+
+**Documentation integrity:**
+- Match app terminology exactly
+- Keep docs in sync with app behavior
+- Prefer screenshots over mockups
+- Link to official resources (support, privacy policy, App Store)
+
 ## SEO and Performance
 Public pages should eventually have useful titles, meaningful meta descriptions, correct heading hierarchy, canonical URLs where appropriate, social-sharing metadata where useful, and appropriate favicon/app imagery.
 
@@ -220,6 +321,39 @@ Do not move application source code into this repository. The website may use ap
 - **GoDaddy** — domain registration and DNS only
 
 Work with this setup rather than introducing new tooling without a concrete benefit.
+
+## Quick Start: Common Agent Scenarios
+
+**Starting a new task:**
+1. Read the Quick Reference table to understand project basics
+2. Check Current Status to see what's implemented vs. planned
+3. Review the relevant section (Design Direction, Content Guidelines, HTML & CSS Conventions, etc.)
+4. Keep changes small and incremental—deploy after each meaningful step
+5. Test locally before committing (open HTML files directly in browser)
+6. Always preserve GitHub Pages functionality
+
+**Adding a new page:**
+1. Create directory structure as needed (e.g., `fetchbag/manual/`)
+2. Write valid HTML: semantic elements, `<html lang="en">`, proper `<meta>` tags, correct nesting
+3. Link the page from parent/navigation pages
+4. Test accessibility: keyboard navigation, color contrast, focus states
+5. Validate responsiveness at mobile and desktop breakpoints
+6. Commit with a clear message explaining the change
+
+**Updating existing content:**
+1. Before modifying, verify the change aligns with project goals (Professional, accessible, no frameworks)
+2. If editing documentation, ensure it matches current FetchBag app behavior
+3. Keep links and URLs stable
+4. Test the change doesn't break navigation or layout
+5. Commit separately from structural changes
+
+**Writing content for the site:**
+1. Use the tone and voice from Content Guidelines (professional, clear, honest)
+2. Never invent or speculate about features—only document what exists
+3. Match FetchBag app terminology exactly
+4. Prefer specific examples over generic marketing language
+5. Keep sentences concise and paragraphs focused
+6. Use heading hierarchy that makes sense (h1 → h2 → h3, etc.)
 
 ## Immediate Task
 When beginning work in this repository:
