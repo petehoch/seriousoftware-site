@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FetchBag FAQ — Frequently asked questions about FetchBag.">
+    <title>FAQ — FetchBag</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <h1 class="header__title">Seriousoftware</h1>
+            <p class="header__subtitle">Our Apps are no joke</p>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="/">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/">FetchBag</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/support/">Support</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/privacy/">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section__hero">
+                <h1 class="hero__title">FAQ</h1>
+                <p class="hero__subtitle">Frequently Asked Questions</p>
+            </section>
+
+            <section class="faq__section">
+                <details class="faq__item">
+                    <summary class="faq__question">What is the difference between a QuickBag and a saved FetchBag?</summary>
+                    <div class="faq__answer">
+                        <p>QuickBag is a one-time compound search. Choose your criteria, run the search, and all matching Items will be displayed.</p>
+                        <p>If you want to use that search again, save it and give it a name. It then appears as a FetchBag in the FetchBags section.</p>
+                        <p>A saved FetchBag is a saved search. It does not move, copy, or own the Items it finds. Each time you open it, it shows the Items that currently match its criteria, including Items added after the FetchBag was saved.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Where is my FetchBag data stored?</summary>
+                    <div class="faq__answer">
+                        <p>By default, FetchBag stores your Items and saved searches in iCloud when an active iCloud account is available, so the same FetchBag folder can be available across your devices. The app uses a folder named FetchBag inside its iCloud Documents container.</p>
+                        <p>If iCloud is not available, FetchBag falls back to a local FetchBag folder in the device's Documents directory. You can also choose a different folder in Settings; once you do, that selected folder is used instead of the automatic default.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Does FetchBag sync between devices?</summary>
+                    <div class="faq__answer">
+                        <p>FetchBag does not have its own sync service. If you use the default folder in iCloud, iCloud handles synchronizing those files across your devices.</p>
+                        <p>FetchBag itself does not control or guarantee iCloud synchronization. If you choose a different storage folder, synchronization depends on the file-syncing services available for that folder.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Does FetchBag work offline?</summary>
+                    <div class="faq__answer">
+                        <p>Yes. FetchBag reads and writes Items as files in its current storage folder. If your FetchBag folder is local, it works offline normally.</p>
+                        <p>If your FetchBag folder is in iCloud, Items that are already available on the device can be opened and searched offline, but new changes may not sync to other devices until the device is back online. Files that iCloud has not downloaded to the device yet may not be available offline.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">What is included in the free version?</summary>
+                    <div class="faq__answer">
+                        <p>The free version of FetchBag supports up to 10 saved Items. When you reach that limit, you can upgrade to FetchBag Pro to add more Items.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">What Shortcuts does FetchBag provide?</summary>
+                    <div class="faq__answer">
+                        <p>FetchBag provides four App Shortcuts:</p>
+                        <ul>
+                            <li><strong>Fetch Item</strong> — Finds a saved Item by title and returns its primary saved payload, such as text, a URL, or Item details.</li>
+                            <li><strong>Search FetchBag</strong> — Searches FetchBag using a short query and reports the top matching Items.</li>
+                            <li><strong>Add Text</strong> — Adds a Text Item with a title and optional tags.</li>
+                            <li><strong>Add Document</strong> — Adds a Document Item with an optional title and tags.</li>
+                        </ul>
+                        <p>Search FetchBag understands some useful query patterns, including Item types, simple date phrases such as "before 2025" or "since 2025," and a person's name in some queries. It is not intended to be a general conversational search.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">What happens if a Document Item I added is moved or deleted?</summary>
+                    <div class="faq__answer">
+                        <p>FetchBag stores a reference to the document's original file location. If that file is moved or deleted, FetchBag marks the Item title with "(missing)" and displays it in red.</p>
+                        <p>The Item's saved title, notes, and connections remain in FetchBag, but the original document cannot be opened or previewed until the file is restored.</p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">What happens when I delete an Item?</summary>
+                    <div class="faq__answer">
+                        <p>Deleting an Item removes it from your FetchBag library and deletes its FetchBag Item record. For Document Items that reference an original file location, FetchBag does not delete or modify the original file.</p>
+                        <p>Deleting a saved FetchBag deletes only the saved search. It does not delete any of the Items that matched the search.</p>
+                    </div>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__container">
+            <ul class="footer__links">
+                <li class="footer__link"><a href="/privacy/">Privacy Policy</a></li>
+                <li class="footer__link"><a href="/fetchbag/support/">Support</a></li>
+            </ul>
+            <p class="footer__copyright">© 2026 Seriousoftware. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -229,7 +229,7 @@ nav {
    ========================================================================== */
 
 main {
-  padding: var(--space-2xl) var(--space-md);
+  padding: var(--space-xl) var(--space-md);
 }
 
 .container {
@@ -243,6 +243,25 @@ section {
 
 section:first-child {
   margin-top: 0;
+}
+
+/* ============================================================================
+   Company Introduction
+   ========================================================================== */
+
+.company-intro {
+    max-width: 60rem;
+    margin-inline: auto;
+    margin-top: var(--space-3xl);
+    text-align: center;
+}
+
+.company-intro p {
+    margin: 0 auto 1.25rem;
+}
+
+.company-intro p.company-intro__punchline {
+    margin-top: var(--space-2xl);
 }
 
 /* ============================================================================
@@ -404,6 +423,79 @@ footer {
 
 .footer__copyright {
   margin: 0;
+}
+
+/* ============================================================================
+   FAQ Section
+   ========================================================================== */
+
+.faq__section {
+  margin: var(--space-2xl) 0;
+}
+
+.faq__item {
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background-color: var(--color-background-alt);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  list-style: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Disclosure triangle marker */
+.faq__question::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: var(--space-md);
+  transition: transform var(--transition-fast);
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  width: 1em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Rotate triangle when open */
+details[open] > .faq__question::before {
+  transform: rotate(90deg);
+}
+
+.faq__answer {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: var(--border-width) solid var(--color-border);
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+}
+
+.faq__answer p {
+  margin: var(--space-md) 0;
+}
+
+.faq__answer p:first-child {
+  margin-top: 0;
+}
+
+.faq__answer ul {
+  margin: var(--space-md) 0 var(--space-md) var(--space-lg);
+  padding-left: var(--space-lg);
+}
+
+.faq__answer li {
+  margin: var(--space-sm) 0;
+  line-height: var(--line-height-relaxed);
 }
 
 /* ============================================================================
