@@ -499,6 +499,121 @@ details[open] > .faq__question::before {
 }
 
 /* ============================================================================
+   Documentation Section
+   ========================================================================== */
+
+.documentation {
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text);
+}
+
+.documentation h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.documentation h3 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.documentation p {
+  margin: var(--space-md) 0;
+  max-width: 100%;
+}
+
+.documentation ul {
+  margin: var(--space-md) 0 var(--space-md) var(--space-lg);
+  padding-left: var(--space-lg);
+}
+
+.documentation li {
+  margin: var(--space-sm) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.documentation__figure {
+  margin: var(--space-2xl) 0;
+  padding: var(--space-lg);
+  background-color: var(--color-background-alt);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.documentation__figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+}
+
+.documentation__image-missing {
+  margin: 0 auto var(--space-md) auto;
+  padding: var(--space-xl);
+  border: var(--border-width) dashed var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color-text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+.documentation__figure figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.documentation__nav {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.documentation__links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin: var(--space-lg) 0;
+}
+
+.documentation__links .cta {
+  display: inline-block;
+}
+
+/* ============================================================================
+   Manual Index
+   ========================================================================== */
+
+.manual__index {
+  margin: var(--space-2xl) 0;
+}
+
+.manual__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.manual__list li {
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background-color: var(--color-background-alt);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  line-height: var(--line-height-relaxed);
+}
+
+.manual__list a {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+}
+
+/* ============================================================================
    Responsive Design
    ========================================================================== */
 

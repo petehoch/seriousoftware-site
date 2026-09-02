@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Getting Started with FetchBag — Learn how to add and organize Items, connect context, and fetch what you need.">
+    <title>Getting Started — FetchBag User Guide</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <h1 class="header__title">Seriousoftware</h1>
+            <p class="header__subtitle">Our Apps are no joke</p>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="/">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/">FetchBag</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/support/">Support</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/privacy/">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section__hero">
+                <h1 class="hero__title">Getting Started with FetchBag</h1>
+            </section>
+
+            <section class="documentation">
+                <p>FetchBag is a way to store information you expect to use again. Add Text, Image, Document, and Link Items, connect them to the context you remember, then fetch the right Item when you need it.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/library-overview.png" alt="FetchBag main library screen showing the Text, Documents, Images, Links, and FetchBags sections">
+                </figure>
+
+                <h2>Your FetchBag library</h2>
+                <p>The main library groups your Items by type:</p>
+                <ul>
+                    <li><strong>Text</strong> — multi line text snippet.</li>
+                    <li><strong>Documents</strong> — documents and other files you want to find again.</li>
+                    <li><strong>Images</strong> — photos from your photos app.</li>
+                    <li><strong>Links</strong> — websites and other URLs.</li>
+                </ul>
+                <p>The library also includes a <strong>FetchBags</strong> section. A saved FetchBag is a saved filter of your Items. It does not move, copy, or own the Items it finds. Each time you open it, it shows the Items that currently match its criteria, including Items added after the FetchBag was saved.</p>
+
+                <h2>Where FetchBag stores your Items</h2>
+                <p>By default, FetchBag stores your Items and saved searches in a local FetchBag folder in the Apps internal documents directory.</p>
+                <p>You can choose a different storage folder in Settings. When you do that, FetchBag will ask if you would like the current files moved to the new location.</p>
+
+                <h2>Add something you want to use again</h2>
+                <p>Every Item has a title and can also include a date, people, places, and tags. The Item type determines the primary content you add.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/add-text-screen.png" alt="Add Text screen showing Title, Text, Date, People, Places, and Tags fields with sample content">
+                </figure>
+
+                <h3>Add a Text Item</h3>
+                <p>Tap the <strong>Add Text</strong> button on the main screen. Enter a title and the text you want to keep. Both are required before you can save.</p>
+                <p>Text can be anything you expect to reuse. Once saved, the Item has an Email button. This will launch your default email app and use the title as the subject and the body of the email will be filled with the text.</p>
+
+                <h3>Add a Link Item</h3>
+                <p>Create a Link Item and enter a title and URL. You can also add <strong>Notes</strong> about the link. If you enter a URL without a scheme, FetchBag attempts to treat it as an HTTPS address.</p>
+
+                <h3>Add an Image Item</h3>
+                <p>Create an Image Item and choose an image from Photos. You can also add <strong>Notes</strong> about the image.</p>
+                <p>When available, FetchBag uses photo metadata to help add context automatically. It can use the image creation date as the Item date and, when GPS metadata is available, resolve the image location to a city and state.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/add-image-screen.png" alt="Add Image screen after selecting a photo, with Date and Place automatically filled from image metadata">
+                </figure>
+
+                <h3>Add a Document Item</h3>
+                <p>Create a Document Item and choose a file. You can also add <strong>Notes</strong> about the document. FetchBag can use the file name as the title and the file modification date as the Item date when those values are available.</p>
+                <p>FetchBag stores a reference to the document's original file location. If the original file is later moved or deleted, the Item's saved title, Notes, and connections remain in FetchBag, but the document cannot be opened or previewed until the file is restored.</p>
+
+                <h2>Connect an Item to what you remember</h2>
+                <p>Finding something later is often easier when you remember its context rather than its exact title or filename.</p>
+                <p>FetchBag lets you connect an Item to:</p>
+                <ul>
+                    <li><strong>People</strong></li>
+                    <li><strong>Places</strong></li>
+                    <li><strong>Date</strong></li>
+                    <li><strong>Tags</strong></li>
+                </ul>
+                <p>People, places, and tags can be entered manually. On iOS, FetchBag can also help you choose a person from Contacts or use your current location to fill in a place. Manual entry remains available if you do not grant those permissions.</p>
+                <p>For Document, Image, and Link Items, the <strong>Notes</strong> field gives you a place for useful free-form context that does not naturally belong in People, Places, Date, or Tags. For a Text Item, the Text itself is the Item's primary content.</p>
+
+                <h2>Find something quickly</h2>
+                <p>Use the <strong>Search</strong> field in the library when you know a word or detail associated with an Item. FetchBag searches across titles, Item types, Text and Notes content, URLs, file names, people, places, and tags.</p>
+                <p>Matching Items are ranked by relevance. Title matches are weighted most heavily, followed by people and places, then tags and Item content.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/search-results.png" alt="Main library with active Search showing multiple matching results across different Item types">
+                </figure>
+
+                <h2>Use QuickBag for a compound search</h2>
+                <p>QuickBag is a one-time compound search for the times when a simple text search is not enough.</p>
+                <p>Choose one or more criteria such as Item type, Text or Notes, image or document name, URL, people, places, tags, or date. Date searches can include Items before a date, after a date, or between two dates.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/quickbag-screen.png" alt="QuickBag definition screen with multiple criteria selected, including Item type, Person, Place, and Date range">
+                </figure>
+
+                <p>Run the search and all matching Items are displayed.</p>
+                <p>If you want to use that search again, save it and give it a name. It then appears as a FetchBag in the <strong>FetchBags</strong> section.</p>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/saved-fetchbag-results.png" alt="Saved FetchBag results screen showing the FetchBag name, matching Items, and result count">
+                </figure>
+
+                <h2>Fetch and reuse an Item</h2>
+                <p>Select an Item to open its detail view. Depending on the Item type, you can:</p>
+                <ul>
+                    <li>Open a Link Item in the system browser.</li>
+                    <li>Preview an available Image Item.</li>
+                    <li>Copy the primary content of supported Items on iOS.</li>
+                    <li>Email a Text Item on iOS.</li>
+                </ul>
+
+                <figure class="documentation__figure">
+                    <img src="/assets/images/fetchbag/manual/item-detail-view.png" alt="Item detail view showing title, content preview, connections, and retrieval actions like Copy and Open">
+                </figure>
+
+                <h2>Use FetchBag with Shortcuts</h2>
+                <p>FetchBag provides four App Shortcuts:</p>
+                <ul>
+                    <li><strong>Fetch Item</strong> — finds a saved Item by title and returns its primary saved payload, such as text, a URL, or Item details.</li>
+                    <li><strong>Search FetchBag</strong> — searches FetchBag using a short query and reports the top matching Items.</li>
+                    <li><strong>Add Text</strong> — adds a Text Item with a title and optional tags.</li>
+                    <li><strong>Add Document</strong> — adds a Document Item with an optional title and tags.</li>
+                </ul>
+                <p>Search FetchBag understands some useful query patterns, including Item types, simple date phrases such as "before 2025" or "since 2025," and a person's name in some queries. It is not intended to be a general conversational search.</p>
+
+                <h2>Free and Pro</h2>
+                <p>The free version of FetchBag supports up to <strong>10 saved Items</strong>. When you reach that limit, you can upgrade to FetchBag Pro to add more Items.</p>
+
+                <nav class="documentation__nav">
+                    <a href="/fetchbag/manual/">Back to User Guide</a>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer__copyright">&copy; 2026 Serious Software. All rights reserved.</p>
+            <nav class="footer__nav">
+                <a href="/privacy/">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.documentation__figure img').forEach((image) => {
+            const showMissingImage = () => {
+                const filename = image.src.split('/').pop();
+                const message = document.createElement('p');
+
+                message.className = 'documentation__image-missing';
+                message.textContent = `Missing image: ${filename}`;
+                image.replaceWith(message);
+            };
+
+            if (image.complete && image.naturalWidth === 0) {
+                showMissingImage();
+            } else {
+                image.addEventListener('error', showMissingImage, { once: true });
+            }
+        });
+    </script>
+</body>
+</html>
