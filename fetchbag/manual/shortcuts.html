@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to use FetchBag with Shortcuts to add, find, and reuse Items in automations.">
+    <title>Using FetchBag with Shortcuts — FetchBag User Guide</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <h1 class="header__title">Seriousoftware</h1>
+            <p class="header__subtitle">Our Apps are no joke</p>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="/">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/">FetchBag</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/fetchbag/support/">Support</a></li>
+                    <li class="nav__item"><a class="nav__link" href="/privacy/">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section__hero">
+                <h1 class="hero__title">Using FetchBag with Shortcuts</h1>
+            </section>
+
+            <section class="documentation">
+                <p>FetchBag works with Apple’s Shortcuts app, so you can add and find things without opening FetchBag and use what you find as part of larger automations.</p>
+                <p>For example, you can find a document and immediately preview or share it, or fetch reusable text and copy it to the clipboard.</p>
+
+                <h2>Featured Shortcuts</h2>
+                <p>FetchBag provides three featured actions: <strong>Search FetchBag</strong>, <strong>Add Text</strong>, and <strong>Add Document</strong>.</p>
+
+                <h3>Search FetchBag</h3>
+                <p><strong>Search FetchBag</strong> finds matching FetchBag Items and passes the results to the next action in your shortcut.</p>
+                <p>You can use a simple free-text search or narrow the results using any combination of:</p>
+                <ul>
+                    <li><strong>Item Type</strong></li>
+                    <li><strong>Title</strong></li>
+                    <li><strong>People</strong></li>
+                    <li><strong>Places</strong></li>
+                    <li><strong>Tags</strong></li>
+                    <li><strong>Text or Notes</strong></li>
+                    <li><strong>URL</strong></li>
+                    <li><strong>Filename</strong></li>
+                    <li><strong>Date Range</strong> — Any Time, Before, After, or Between</li>
+                </ul>
+                <p>You can combine free-text Search with structured criteria. When several criteria are provided, an Item must satisfy all of them.</p>
+                <p>Leave all criteria empty to return all FetchBag Items.</p>
+                <p>Search results use the same filtering and relevance ordering as FetchBag. When several Items might match, Apple’s <strong>Choose from List</strong> action is an easy way to let the user select one before continuing the shortcut.</p>
+
+                <h3>Add Text</h3>
+                <p><strong>Add Text</strong> creates a Text Item without opening FetchBag.</p>
+                <p>Provide:</p>
+                <ul>
+                    <li><strong>Title</strong> — required</li>
+                    <li><strong>Text</strong> — required</li>
+                    <li><strong>Tags</strong> — optional</li>
+                </ul>
+                <p>The new Item is immediately available to FetchBag and other Shortcut actions.</p>
+                <p>If a required value isn't supplied when you build the shortcut, Shortcuts will ask you for it when the shortcut runs.</p>
+                <p>The normal free-version Item limit applies when adding Items through Shortcuts.</p>
+
+                <h3>Add Document</h3>
+                <p><strong>Add Document</strong> creates a Document Item from a document supplied by Files or another Shortcut action.</p>
+                <p>Provide:</p>
+                <ul>
+                    <li><strong>Document</strong> — required</li>
+                    <li><strong>Title</strong> — optional; FetchBag uses the document's filename when no title is supplied</li>
+                    <li><strong>Tags</strong> — optional</li>
+                </ul>
+                <p>FetchBag keeps a reference to the original document rather than making a copy. This means changes to the original remain available through FetchBag.</p>
+                <p>If the document is moved or FetchBag can no longer find it, the Document Item remains in FetchBag with its saved information. You can reconnect the FetchBag Item to the document’s new location in FetchBag.</p>
+                <p>The new Item is immediately available to FetchBag and other Shortcut actions.</p>
+                <p>The normal free-version Item limit applies when adding Items through Shortcuts.</p>
+
+                <h2>Using Items in Other Shortcut Actions</h2>
+                <p><strong>Search FetchBag</strong>, <strong>Add Text</strong>, and <strong>Add Document</strong> return FetchBag Items that can be passed to other actions in your shortcut.</p>
+                <p>FetchBag provides several actions for getting useful information from those Items.</p>
+
+                <h3>Get FetchBag Item Text</h3>
+                <p><strong>Get FetchBag Item Text</strong> returns a selected text value from a FetchBag Item.</p>
+                <p>Choose from:</p>
+                <ul>
+                    <li><strong>Title</strong></li>
+                    <li><strong>Item Type</strong></li>
+                    <li><strong>Text Content</strong></li>
+                    <li><strong>Notes</strong></li>
+                    <li><strong>People</strong></li>
+                    <li><strong>Places</strong></li>
+                    <li><strong>Tags</strong></li>
+                    <li><strong>File Name</strong></li>
+                </ul>
+                <p>For example, use <strong>Text Content</strong> to retrieve the reusable text from a Text Item, or <strong>People</strong> to retrieve the people connected to an Item.</p>
+
+                <h3>Get FetchBag Item URL</h3>
+                <p><strong>Get FetchBag Item URL</strong> returns the URL from a Link Item as a URL that can be passed to another Shortcut action.</p>
+                <p>For example, pass it to Apple’s <strong>Open URLs</strong> action to open the link.</p>
+
+                <h3>Get FetchBag Item Date</h3>
+                <p><strong>Get FetchBag Item Date</strong> returns the Date connected to a FetchBag Item.</p>
+                <p>Because it is returned as a Date rather than plain text, it can be passed directly to other Shortcut actions that work with dates.</p>
+
+                <h3>Get FetchBag Item File</h3>
+                <p><strong>Get FetchBag Item File</strong> returns the actual file associated with a Document or Image Item.</p>
+                <p>The returned file can be passed to actions such as:</p>
+                <ul>
+                    <li><strong>Quick Look</strong></li>
+                    <li><strong>Share</strong></li>
+                    <li><strong>Save File</strong></li>
+                    <li><strong>Open In</strong></li>
+                    <li><strong>Send Email</strong></li>
+                </ul>
+                <p>For externally referenced documents, FetchBag uses its saved access to retrieve the original file when it is available.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__container">
+            <ul class="footer__links">
+                <li class="footer__link"><a href="/privacy/">Privacy Policy</a></li>
+                <li class="footer__link"><a href="/fetchbag/support/">Support</a></li>
+            </ul>
+            <p class="footer__copyright">© 2026 Seriousoftware. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
