@@ -71,17 +71,20 @@
                 <p>Provide:</p>
                 <ul>
                     <li><strong>Document</strong> — required</li>
-                    <li><strong>Title</strong> — optional; FetchBag uses the document's filename when no title is supplied</li>
+                    <li><strong>Title</strong> — optional; FetchBag uses the document's filename without its extension when no title is supplied</li>
                     <li><strong>Tags</strong> — optional</li>
                 </ul>
-                <p>FetchBag keeps a reference to the original document rather than making a copy. This means changes to the original remain available through FetchBag.</p>
-                <p>If the document is moved or FetchBag can no longer find it, the Document Item remains in FetchBag with its saved information. You can reconnect the FetchBag Item to the document’s new location in FetchBag.</p>
+                <p>When Shortcuts supplies an accessible file URL, FetchBag references the original Document. Changes to the original remain available through FetchBag. If Shortcuts instead supplies file data without an original file URL, FetchBag stores that supplied data with the Item; it is not a reference to an original Document.</p>
+                <p>If a supplied file URL cannot be accessed, the action may fail. It does not automatically store a copy instead.</p>
+                <p>If access to a referenced Document is unavailable, the Item's title, Notes, and connections remain in FetchBag. See <a href="#document-access">Using referenced Documents on another device</a> for access and recovery steps.</p>
                 <p>The new Item is immediately available to FetchBag and other Shortcut actions.</p>
                 <p>The normal free-version Item limit applies when adding Items through Shortcuts.</p>
 
                 <h2>Using Items in Other Shortcut Actions</h2>
                 <p><strong>Search FetchBag</strong>, <strong>Add Text</strong>, and <strong>Add Document</strong> return FetchBag Items that can be passed to other actions in your shortcut.</p>
                 <p>FetchBag provides several actions for getting useful information from those Items.</p>
+                <p>For Document and Image Items, use <strong>Get FetchBag Item File</strong> before passing the result to an action that expects a file. <strong>Search FetchBag</strong> returns FetchBag Item entities, not the underlying Document or Image files.</p>
+                <p>For example: <strong>Search FetchBag</strong> → <strong>Choose from List</strong> → <strong>Get FetchBag Item File</strong> → <strong>Quick Look</strong>.</p>
 
                 <h3>Get FetchBag Item Text</h3>
                 <p><strong>Get FetchBag Item Text</strong> returns a selected text value from a FetchBag Item.</p>
@@ -89,14 +92,14 @@
                 <ul>
                     <li><strong>Title</strong></li>
                     <li><strong>Item Type</strong></li>
-                    <li><strong>Text Content</strong></li>
+                    <li><strong>Text</strong></li>
                     <li><strong>Notes</strong></li>
                     <li><strong>People</strong></li>
                     <li><strong>Places</strong></li>
                     <li><strong>Tags</strong></li>
                     <li><strong>File Name</strong></li>
                 </ul>
-                <p>For example, use <strong>Text Content</strong> to retrieve the reusable text from a Text Item, or <strong>People</strong> to retrieve the people connected to an Item.</p>
+                <p>For example, use <strong>Text</strong> to retrieve the reusable text from a Text Item, or <strong>People</strong> to retrieve the people connected to an Item.</p>
 
                 <h3>Get FetchBag Item URL</h3>
                 <p><strong>Get FetchBag Item URL</strong> returns the URL from a Link Item as a URL that can be passed to another Shortcut action.</p>
@@ -116,7 +119,15 @@
                     <li><strong>Open In</strong></li>
                     <li><strong>Send Email</strong></li>
                 </ul>
-                <p>For externally referenced documents, FetchBag uses its saved access to retrieve the original file when it is available.</p>
+                <p>For externally referenced Documents, FetchBag uses the access saved on the device running the shortcut to retrieve the original file when it is available.</p>
+
+                <h3 id="document-access">Using referenced Documents on another device</h3>
+                <p>To use the same FetchBag on multiple devices, choose a folder available on each device, such as a folder in iCloud Drive, and select that same FetchBag folder in FetchBag Settings on every device. Your Items and connections become available as the storage provider synchronizes the folder. FetchBag does not provide its own cloud synchronization.</p>
+                <p>Access to referenced Documents is separate. If <strong>Get FetchBag Item File</strong> reports that a Document needs access on this device, open the Item in FetchBag and use <strong>Reselect Document</strong> to select the original in Files. FetchBag remembers that selection on the device. Run the shortcut again after selecting the Document.</p>
+                <p>If access has been lost, use <strong>Reconnect File</strong> in FetchBag. A cloud file may also be temporarily unavailable or still downloading; check that it is available in Files before trying again. If the original has been deleted, restore it before reconnecting. The Item's title, Notes, and connections remain in FetchBag.</p>
+
+                <h3>Fetch Item</h3>
+                <p><strong>Fetch Item</strong> is also available as a title-matching action that returns a text result. For automations that need a Document or Image file, use <strong>Search FetchBag</strong> followed by <strong>Get FetchBag Item File</strong>.</p>
             </section>
         </div>
     </main>

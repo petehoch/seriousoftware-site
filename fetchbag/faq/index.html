@@ -35,7 +35,7 @@
                     <summary class="faq__question">What is the difference between a QuickBag and a saved FetchBag?</summary>
                     <div class="faq__answer">
                         <p>QuickBag is a one-time compound search. Choose your criteria, run the search, and all matching Items will be displayed.</p>
-                        <p>If you want to use that search again, save it and give it a name. It then appears as a FetchBag in the FetchBags section.</p>
+                        <p>If you want to use that search again, save it and give it a <strong>Bag Name</strong>. It then appears as a FetchBag in the FetchBags section.</p>
                         <p>A saved FetchBag is a saved search. It does not move, copy, or own the Items it finds. Each time you open it, it shows the Items that currently match its criteria, including Items added after the FetchBag was saved.</p>
                     </div>
                 </details>
@@ -43,16 +43,18 @@
                 <details class="faq__item">
                     <summary class="faq__question">Where is my FetchBag data stored?</summary>
                     <div class="faq__answer">
-                        <p>By default, FetchBag stores your Items and saved searches in a local FetchBag folder in the Apps internal documents directory.</p>
-                        <p>You can choose a different storage folder in Settings. When you do that, FetchBag will ask if you would like the current files moved to the new location.</p>
+                        <p>By default, FetchBag stores your Items, their connections, and saved FetchBags in a local FetchBag folder in the app's internal Documents directory.</p>
+                        <p>You can choose a different storage folder in Settings. If your current library contains Items, FetchBag asks whether to move the existing files or switch folders without moving them.</p>
+                        <p>Referenced Documents remain in their original locations. FetchBag does not copy them into your FetchBag folder.</p>
                     </div>
                 </details>
 
                 <details class="faq__item">
                     <summary class="faq__question">Does FetchBag sync between devices?</summary>
                     <div class="faq__answer">
-                        <p>FetchBag does not have its own sync service. If you use the default folder in iCloud, iCloud handles synchronizing those files across your devices.</p>
-                        <p>FetchBag itself does not control or guarantee iCloud synchronization. If you choose a different storage folder, synchronization depends on the file-syncing services available for that folder.</p>
+                        <p>To use the same FetchBag on multiple devices, choose a storage folder available on each device, such as a folder in iCloud Drive. In FetchBag Settings on each device, select that same FetchBag folder.</p>
+                        <p>Your Items, their connections, and saved FetchBags are stored in that folder and become available as iCloud Drive or your storage provider synchronizes them. FetchBag does not provide its own cloud synchronization; the default local folder is not shared between devices.</p>
+                        <p>Referenced Documents are different. Each device needs permission to access the original Document outside the FetchBag folder. The first time you use it on another device, FetchBag may show <strong>Reselect Document</strong>. Select the original Document in Files to give that device access. FetchBag remembers the selection on that device.</p>
                     </div>
                 </details>
 
@@ -67,29 +69,28 @@
                 <details class="faq__item">
                     <summary class="faq__question">What is included in the free version?</summary>
                     <div class="faq__answer">
-                        <p>The free version of FetchBag supports up to 10 saved Items. When you reach that limit, you can upgrade to FetchBag Pro to add more Items.</p>
+                        <p>The free version of FetchBag supports up to 10 saved Items. FetchBag Pro offers unlimited Items.</p>
                     </div>
                 </details>
 
                 <details class="faq__item">
                     <summary class="faq__question">What Shortcuts does FetchBag provide?</summary>
                     <div class="faq__answer">
-                        <p>FetchBag provides four App Shortcuts:</p>
-                        <ul>
-                            <li><strong>Fetch Item</strong> — Finds a saved Item by title and returns its primary saved payload, such as text, a URL, or Item details.</li>
-                            <li><strong>Search FetchBag</strong> — Searches FetchBag using a short query and reports the top matching Items.</li>
-                            <li><strong>Add Text</strong> — Adds a Text Item with a title and optional tags.</li>
-                            <li><strong>Add Document</strong> — Adds a Document Item with an optional title and tags.</li>
-                        </ul>
-                        <p>Search FetchBag understands some useful query patterns, including Item types, simple date phrases such as "before 2025" or "since 2025," and a person's name in some queries. It is not intended to be a general conversational search.</p>
+                        <p>FetchBag features <strong>Search FetchBag</strong>, <strong>Add Text</strong>, and <strong>Add Document</strong>, plus actions that retrieve text, URLs, dates, and files from Items for use in other actions.</p>
+                        <p>See <a href="/fetchbag/manual/shortcuts.html">Using FetchBag with Shortcuts</a> for search criteria, required inputs, and examples.</p>
                     </div>
                 </details>
 
                 <details class="faq__item">
-                    <summary class="faq__question">What happens if a Document Item I added is moved or deleted?</summary>
+                    <summary class="faq__question">What happens if a referenced Document is moved, deleted, or unavailable?</summary>
                     <div class="faq__answer">
-                        <p>FetchBag stores a reference to the document's original file location. If that file is moved or deleted, FetchBag marks the Item title with "(missing)" and displays it in red.</p>
-                        <p>The Item's saved title, notes, and connections remain in FetchBag, but the original document cannot be opened or previewed until the file is restored.</p>
+                        <p>FetchBag references the original Document. Its saved title, Notes, and connections remain in FetchBag even when the original cannot be accessed.</p>
+                        <ul>
+                            <li><strong>Another device needs access:</strong> Use <strong>Reselect Document</strong> and select the original in Files. FetchBag remembers the selection on that device.</li>
+                            <li><strong>A cloud file is temporarily unavailable or downloading:</strong> Check that it is available in Files and try again. This does not mean the original was deleted.</li>
+                            <li><strong>The original moved or access was lost:</strong> Use <strong>Reconnect File</strong> to select the original again.</li>
+                            <li><strong>The original was deleted:</strong> Restore it from its storage location or a backup, then reconnect if needed. FetchBag cannot restore a Document it only references.</li>
+                        </ul>
                     </div>
                 </details>
 
